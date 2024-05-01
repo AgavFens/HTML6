@@ -1,0 +1,115 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    align-items: center;
+    position: relative; /
+}
+
+h1, img {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    position: relative;
+    z-index: 1; 
+}
+
+h1:first-child {
+    grid-column: 1 / 2;
+    color: white; 
+    background: none;
+    font-family: 'Oswald';
+    font-size: 50px;
+}
+
+h1:last-child {
+    grid-column: 3 / 4;
+    background: linear-gradient(to right, #FF6A00, #FFD700); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Lobster';
+    font-size: 50px; 
+    font-weight: bold; 
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; 
+}
+
+img:last-child {
+    position: absolute; 
+    top: 20px; 
+    left: 20px;
+    z-index: 2; 
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.navigation {
+    position: absolute;
+    top: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation a {
+    margin: 20px 10px; 
+    color: grey;
+    text-decoration: none;
+    font-size: 20px; 
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 160%; 
+    height: 160%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.order-button {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    padding: 10px 35px;
+    background: linear-gradient(to right, #FF6A00, #FFD700); 
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+.order-button:hover {
+    background: linear-gradient(to right, #FFD700, #FF6A00); 
+}
+
+
